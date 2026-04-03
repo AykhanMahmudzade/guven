@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FaVideo } from 'react-icons/fa';
 // --- ИМПОРТ LIGHTBOX И ПЛАГИНА ---
 import Lightbox from "yet-another-react-lightbox";
