@@ -52,7 +52,7 @@ const Home = () => {
         <div className="hero-content">
           <span className="badge">2023-cü ildən fəaliyyətdə</span>
           <h1 className="main-title">Gələcəyə İnvestisiya</h1>
-          <p className="hero-sub">Güvən Fondu -Azərbaycan təhsilinə dəstək verən və onun inkişafını təmin edən aparıcı təşkilatlardan biridir. </p>
+          <p className="hero-sub">Güvən Fondu-Azərbaycan təhsilinə dəstək verən və onun inkişafını təmin edən aparıcı təşkilatlardan biridir. </p>
           <div className="btn-group">
             <button className="primary-btn" onClick={() => navigate('/about')}>Haqqımızda</button>
             <button className="secondary-btn" onClick={() => navigate('/contact')}>Əlaqə</button>
@@ -85,7 +85,7 @@ const Home = () => {
           </div>
           <div className="about-preview-text">
             <h2>GÜVƏN TƏHSİİLİN İNKİŞAFINA DƏSTƏK FONDU</h2>
-            <p>Ümid Təhsilin İnkişafına Dəstək Fondu 2023-cü ildə Sosial baxımdan həssas əhali qrupuna aid olan ailələrdən olan tələbə gənclərimizin keyfiyyətli təhsil ala bilməsi məqsədi ilə yaradılmışdır.</p>
+            <p>Güvən Təhsilin İnkişafına Dəstək Fondu sosial baxımdan həssas ailələrdən olan tələbə gənclərin keyfiyyətli təhsil imkanlarına çıxışını təmin etmək məqsədilə təsis edilmişdir.</p>
             <button className="more-btn" onClick={() => navigate('/about')}>
               Daha ətraflı <FaArrowRight className="arrow-icon" />
             </button>
