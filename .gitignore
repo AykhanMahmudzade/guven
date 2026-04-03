@@ -23,9 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# Large videos (GitHub 100MB limit; add these paths on server or locally)
+# Large videos (GitHub 100MB limit)
 src/assets/g1v.mp4
 src/assets/g2vg.MP4
 src/assets/g2vg.mp4
 src/assets/g3v.MP4
 src/assets/g3v.mp4
+src/assets/hero-video.MP4
