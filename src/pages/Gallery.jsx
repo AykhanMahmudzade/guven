@@ -6,12 +6,12 @@ import Video from "yet-another-react-lightbox/plugins/video";
 import "yet-another-react-lightbox/styles.css"; 
 import './Gallery.css';
 
-// Gallery clips: large sources are gitignored; ship a small shared clip with the repo.
-import galleryClip from '../assets/hero-video1.mp4';
+import galleryClip1 from '../assets/g2vg.mp4';
+import galleryClip2 from '../assets/g1v.mp4';
 
 const videoList = [
-  { id: 101, type: 'video', src: galleryClip },
-  { id: 102, type: 'video', src: galleryClip },
+  { id: 101, type: 'video', src: galleryClip1 },
+  { id: 102, type: 'video', src: galleryClip2 },
 ];
 
 // 2. Генерируем фото, УБИРАЯ 8, 12, 15
