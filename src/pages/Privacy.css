@@ -1,0 +1,137 @@
+.privacy-page {
+  margin-top: 0 !important;
+  padding-top: 0;
+  background-color: #f8f9fc;
+}
+
+.p-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero --- */
+.privacy-hero {
+  background: linear-gradient(135deg, #002d5a 0%, #004a8d 100%);
+  padding: 45px 20px 30px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 40px 40px;
+}
+
+.privacy-hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.privacy-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.privacy-breadcrumb {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.privacy-breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+/* --- Body & Content --- */
+.privacy-body {
+  padding: 60px 0 100px;
+}
+
+.privacy-card {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.privacy-section {
+  margin-bottom: 35px;
+}
+
+.privacy-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #00346d;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.s-icon {
+  color: #0056b3;
+}
+
+.privacy-section p, .privacy-section li {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+}
+
+.highlight-text {
+  background: #fff4f4;
+  padding: 10px 15px;
+  border-left: 4px solid #ff4d4d;
+  font-weight: 600;
+  color: #d63031 !important;
+}
+
+.contact-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0f7ff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: #0056b3;
+  margin-top: 10px;
+}
+
+.privacy-footer-info {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px dashed #eee;
+}
+
+.privacy-footer-info h4 {
+  margin: 20px 0 10px;
+  color: #222;
+}
+
+.privacy-footer-info p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .privacy-card {
+    padding: 30px 20px;
+  }
+  .privacy-title {
+    font-size: 2rem;
+  }
+}

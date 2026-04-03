@@ -1,0 +1,108 @@
+/* Values Page Styles */
+.values-container {
+  padding-bottom: 80px;
+}
+
+.values-hero {
+  background-color: #00346d;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.values-main-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.values-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.values-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.values-card {
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.values-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 86, 179, 0.1);
+}
+
+.values-icon-box {
+  font-size: 3rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+}
+
+.values-card-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.values-card-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .values-hero {
+    padding: 60px 20px;
+  }
+
+  .values-main-title {
+    font-size: 2rem;
+  }
+
+  .values-subtitle {
+    font-size: 1rem;
+  }
+
+  .values-content {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .values-card {
+    padding: 30px 20px;
+  }
+
+  .values-card-title {
+    font-size: 1.2rem;
+  }
+
+  .values-card-text {
+    font-size: 0.95rem;
+  }
+}

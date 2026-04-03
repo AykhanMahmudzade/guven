@@ -1,0 +1,185 @@
+.scholar-page {
+  margin-top: 0 !important;
+  background-color: #fbfcfe;
+}
+
+.s-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero --- */
+.scholar-hero {
+  background: linear-gradient(135deg, #002d5a 0%, #0056b3 100%);
+  padding: 55px 20px 35px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 40px 40px;
+}
+
+.scholar-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* --- Cards General --- */
+.scholar-content-section {
+  padding: 60px 0 100px;
+}
+
+.scholar-card {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 86, 179, 0.06);
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 86, 179, 0.05);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #0056b3;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+}
+
+.scholar-card h2, .scholar-card h3 {
+  margin: 0;
+  color: #222;
+}
+
+/* --- Layouts --- */
+.scholar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.scholar-two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* --- Elements --- */
+.score-box {
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.score-box p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.q-item {
+  background: #fff;
+  border: 1px dashed #0056b3;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.scholar-list-box {
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  border-left: 5px solid #0056b3;
+}
+
+.scholar-list-box.alt-bg {
+  background: #0056b3;
+  color: white;
+  border: none;
+}
+
+.scholar-list-box h4 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.docs-list li {
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* --- Banner --- */
+.apply-banner {
+  margin-top: 50px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid #0056b3;
+}
+
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.banner-icon {
+  font-size: 3rem;
+  color: #0056b3;
+}
+
+.apply-btn {
+  background: rgba(0, 86, 179, 0.15);
+  color: #0056b3;
+  border: 2px solid rgba(0, 86, 179, 0.25);
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: not-allowed;
+  margin-top: 18px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.apply-btn:disabled {
+  opacity: 0.85;
+}
+
+.apply-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* --- Mobile --- */
+@media (max-width: 850px) {
+  .scholar-grid, .scholar-two-col, .apply-banner {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-info { justify-content: center; margin-bottom: 20px; }
+  .card-header { justify-content: center; }
+  .scholar-title { font-size: 2.2rem; }
+}

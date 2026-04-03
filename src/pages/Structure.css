@@ -1,0 +1,256 @@
+/* --- ƏSAS SƏHİFƏ AYARLARI --- */
+.structure-page {
+  margin-top: 0;
+  background-color: #f8faff;
+}
+
+.s-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- HERO SEKSİYASI --- */
+.structure-hero {
+  background: linear-gradient(135deg, #0056b3 0%, #002d5a 100%);
+  min-height: 150px !important;
+  height: auto !important;
+  padding: 30px 15px 24px !important;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 40px 40px;
+}
+
+.structure-hero-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.structure-hero-subtitle {
+  font-size: 0.95rem;
+}
+
+.structure-hero-subtitle {
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.structure-breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.structure-breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+/* --- STRUKTUR DİAQRAMI (Main Logic) --- */
+.structure-chart-section {
+  padding: 80px 0;
+}
+
+.org-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Bloklar arası şaquli məsafə */
+  position: relative;
+}
+
+/* Ümumi Blok Stilləri */
+.chart-node {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  text-align: center;
+  min-width: 220px;
+  position: relative; /* Oxlar üçün */
+}
+
+.chart-node h2, .chart-node h3, .chart-node h4 {
+  margin: 0;
+  color: #0056b3;
+}
+
+/* Təsisçi (Göy blok) */
+.main-node {
+  background-color: #4a76c5; /* Şəkildəki göy rəng */
+  color: white;
+  border: none;
+  padding: 25px 50px;
+}
+
+.main-node h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Standart Bloklar (Müşahidə şurası, Direktor) */
+.standard-node {
+  border: 2px solid #ccc;
+}
+
+.standard-node h3 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Şöbə Başlıqları */
+.dept-node {
+  border: 2px solid #4a76c5;
+  background-color: #f0f4f8;
+  margin-bottom: 25px; /* İşçilərdən məsafə */
+}
+
+.dept-node h4 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* İşçi Siyahısı Blokları */
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.staff-node {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #444;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* --- ŞÖBƏLƏRİN DÜZÜLÜŞÜ (Level 4) --- */
+.department-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.department-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+}
+
+/* --- BİRLƏŞDİRİCİ XƏTLƏR (OXLAX) --- */
+
+/* Ümumi şaquli xətlər (blokun altından çıxan) */
+.level-1 .chart-node::after,
+.level-2 .chart-node::after,
+.level-3 .chart-node::after,
+.dept-node::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; /* gap qədər */
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background-color: #4a76c5;
+  transform: translateX(-50%);
+}
+
+/* Ox başlıqları (blokun üstünə daxil olan) */
+.level-2 .chart-node::before,
+.level-3 .chart-node::before,
+.department-row .dept-node::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #4a76c5;
+}
+
+/* Direktorun altındakı mürəkkəb üçlü xətt */
+.level-3 .chart-node::after {
+  height: 20px; /* Qısa düz xətt */
+  bottom: -20px;
+}
+
+/* Üfüqi xətt (Direktordan şöbələrə paylanan) */
+.department-row::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Direktor xəttinin bitdiyi yer */
+  left: 16.66%; /* Sol şöbənin mərkəzi */
+  right: 16.66%; /* Sağ şöbənin mərkəzi */
+  height: 2px;
+  background-color: #4a76c5;
+}
+
+/* Üfüqi xəttdən şöbələrə düşən şaquli xətlər */
+.department-col::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  width: 2px;
+  height: 20px;
+  background-color: #4a76c5;
+}
+
+/* --- MOBİL ADAPTASİYA --- */
+@media (max-width: 991px) {
+  .s-container {
+    padding: 0 16px;
+  }
+
+  .structure-hero {
+    min-height: 120px !important;
+    padding: 20px 12px 16px !important;
+  }
+
+  .structure-hero-title {
+    font-size: 1.4rem !important;
+  }
+
+  .structure-hero-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .department-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .chart-node,
+  .main-node,
+  .department-col,
+  .staff-node {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  /* Mobildə mürəkkəb xətləri yığışdırırıq, sadə şaquli xətlər saxlayırıq */
+  .department-row::before,
+  .department-col::before {
+    display: none;
+  }
+  
+  .level-3 .chart-node::after {
+    height: 50px;
+    bottom: -50px;
+  }
+}

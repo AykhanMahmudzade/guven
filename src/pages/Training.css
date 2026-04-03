@@ -1,0 +1,161 @@
+.training-page {
+  margin-top: 0 !important;
+  background-color: #f4f7fa;
+}
+
+.t-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- HERO --- */
+.training-hero {
+  background: linear-gradient(135deg, #00346d 0%, #0056b3 100%);
+  padding: 55px 20px 30px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 30px 30px;
+}
+
+.training-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.training-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.training-breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.training-breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+/* --- CARDS --- */
+.trainings-list-section {
+  padding: 80px 0;
+}
+
+.training-card {
+  display: flex;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+}
+
+.training-card-image {
+  flex: 1;
+  min-width: 320px;
+  position: relative;
+}
+
+.training-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.training-date-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #0056b3;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.training-card-content {
+  flex: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.partner-tag {
+  color: #0056b3;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.training-card-content h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.training-card-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.extra-info {
+  background: #f8faff;
+  padding: 15px;
+  border-left: 4px solid #0056b3;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .training-card {
+    flex-direction: column;
+  }
+  .training-card-image {
+    min-width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .t-container {
+    padding: 0 16px;
+  }
+
+  .training-main-title {
+    font-size: 2.2rem;
+  }
+
+  .training-card {
+    margin-bottom: 28px;
+  }
+
+  .training-card-image {
+    min-width: 100%;
+    height: 220px;
+  }
+
+  .training-card-content {
+    padding: 22px 16px;
+  }
+
+  .training-card-content h2 {
+    font-size: 1.5rem;
+  }
+}

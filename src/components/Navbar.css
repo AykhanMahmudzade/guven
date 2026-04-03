@@ -1,0 +1,496 @@
+/* --- ДОПОЛНЕНИЯ В NAVBAR STYLES --- */
+.header-wrapper {
+  position: relative;
+  top: 0;
+  z-index: 1100;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.header-top-line {
+  height: 6px;
+  background-color: #0056b3;
+  width: 100%;
+}
+
+/* --- СЕКЦИЯ БРЕНДИНГА С ДВУМЯ ЛОГОТИПАМИ --- */
+.branding-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 86, 179, 0.1);
+}
+
+.branding-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.branding-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.branding-container a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ЕДИНЫЙ РАЗМЕР ДЛЯ ОБОИХ ЛОГОТИПОВ */
+.logo-img-main {
+  height: 160px !important;
+  width: auto !important;
+  max-width: 350px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-img-main1 {
+  height: 190px !important;
+  width: auto !important;
+  max-width: 350px !important;
+  object-fit: contain;
+  display: block;
+}
+/* Для планшетов */
+@media (max-width: 991px) {
+  .branding-container {
+    gap: 30px;
+  }
+  
+  .logo-img-main {
+    height: 120px !important;
+    max-width: 320px !important;
+  }
+}
+
+/* Для мобильных */
+@media (max-width: 767px) {
+  .branding-section {
+    padding: 10px 0;
+  }
+  
+  .branding-container {
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .logo-img-main {
+    height: 100px !important;
+    max-width: 260px !important;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .branding-container {
+    gap: 15px;
+  }
+  
+  .logo-img-main {
+    height: 80px !important;
+    max-width: 200px !important;
+  }
+}
+
+/* --- ОСНОВНОЙ КОД NAVBAR (ОБЪЕДИНЕННЫЙ) --- */
+.header-navigation {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 86, 179, 0.1);
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 70px;
+}
+
+/* Бургер-иконка (скрыта на десктопе) */
+.hamburger-icon {
+  display: none;
+  font-size: 1.6rem;
+  color: #0056b3;
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute;
+  left: 20px;
+}
+
+/* Нав меню для десктопа */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Стили для ссылок с иконкой */
+.nav-link-with-icon {
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+/* Анимация при наведении */
+.nav-link-with-icon:hover {
+  color: #0056b3;
+  background: rgba(0, 86, 179, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Эффект подчеркивания */
+.nav-link-with-icon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: #0056b3;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-with-icon:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu - улучшенный дизайн */
+.dropdown {
+  position: absolute;
+  top: calc(100% - 5px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff;
+  min-width: 240px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10000 !important;
+  border: 1px solid rgba(0, 86, 179, 0.1);
+}
+
+/* Показываем при ховере на десктопе */
+@media (min-width: 992px) {
+  .nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Добавляем стрелочку к дропдауну */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid rgba(0, 86, 179, 0.1);
+  border-top: 1px solid rgba(0, 86, 179, 0.1);
+}
+
+.dropdown a {
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Анимация для пунктов дропдауна */
+.dropdown a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #0056b3;
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.dropdown a:hover {
+  background: #f8f9fa;
+  color: #0056b3;
+  padding-left: 32px;
+}
+
+.dropdown a:hover::before {
+  transform: scaleY(1);
+}
+
+/* Кнопка İanə Et */
+.donate-btn-nav {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  color: #fff !important;
+  padding: 10px 24px !important;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+  margin-left: 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.donate-btn-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.donate-btn-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+  background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
+}
+
+.donate-btn-nav:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Оверлей для мобильного меню */
+.menu-overlay {
+  display: none;
+}
+
+.menu-overlay.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+  backdrop-filter: blur(5px);
+}
+
+/* --- МОБИЛЬНАЯ ВЕРСИЯ --- */
+@media (max-width: 991px) {
+  .nav-container {
+    justify-content: flex-start;
+    min-height: 60px;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(0, 86, 179, 0.08);
+    color: #0056b3;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    left: 16px;
+    transition: background 0.2s ease;
+  }
+
+  .hamburger-icon:hover {
+    background: rgba(0, 86, 179, 0.15);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(300px, 88vw);
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 16px 40px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+    align-items: stretch;
+    gap: 4px;
+    box-shadow: -10px 0 40px rgba(0, 55, 120, 0.12);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-link-with-icon {
+    padding: 13px 16px;
+    border-radius: 12px;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a2a44;
+  }
+
+  .nav-link-with-icon::after {
+    display: none;
+  }
+
+  .nav-link-with-icon:hover {
+    background: rgba(0, 86, 179, 0.07);
+    transform: none;
+    color: #0056b3;
+  }
+
+  .arrow {
+    font-size: 0.75rem;
+    color: #0056b3;
+    opacity: 0.7;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border-radius: 10px;
+    margin: 4px 0 4px 12px;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    padding: 6px 0;
+    border: none;
+    background: #f4f7fc;
+  }
+
+  .dropdown::before {
+    display: none;
+  }
+
+  .dropdown.show {
+    display: block;
+    animation: slideDown 0.25s ease;
+  }
+
+  .dropdown a {
+    padding: 11px 20px;
+    font-size: 0.92rem;
+    color: #3a4a66;
+    border-radius: 8px;
+    margin: 2px 6px;
+  }
+
+  .dropdown a:hover {
+    padding-left: 26px;
+    background: rgba(0, 86, 179, 0.07);
+    color: #0056b3;
+  }
+
+  .donate-btn-nav {
+    margin: 16px 0 0;
+    text-align: center;
+    padding: 14px !important;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* Анимация для мобильного меню */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Плавное появление пунктов меню при загрузке */
+.nav-item {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+.nav-item:nth-child(4) { animation-delay: 0.4s; }
+.nav-item:nth-child(5) { animation-delay: 0.5s; }
+.nav-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

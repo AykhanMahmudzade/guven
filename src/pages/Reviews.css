@@ -1,0 +1,130 @@
+/* Reviews Page Styles */
+.reviews-container {
+  padding-bottom: 80px;
+}
+
+.reviews-hero {
+  background-color: #00346d;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reviews-main-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.reviews-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.reviews-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.reviews-card {
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.reviews-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 86, 179, 0.1);
+}
+
+.reviews-quote-icon {
+  font-size: 2rem;
+  color: #0056b3;
+  opacity: 0.2;
+  margin-bottom: 15px;
+}
+
+.reviews-review-text {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.reviews-stars {
+  margin-bottom: 15px;
+}
+
+.reviews-star-icon {
+  color: #ffc107;
+  margin: 0 2px;
+}
+
+.reviews-user-info {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.reviews-user-name {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.reviews-user-role {
+  margin: 5px 0 0 0;
+  color: #0056b3;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews-hero {
+    padding: 60px 20px;
+  }
+
+  .reviews-main-title {
+    font-size: 2rem;
+  }
+
+  .reviews-subtitle {
+    font-size: 1rem;
+  }
+
+  .reviews-content {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-card {
+    padding: 30px 20px;
+  }
+
+  .reviews-review-text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,150 @@
+/* Events Page Styles */
+.events-container {
+  padding-bottom: 80px;
+}
+
+.events-hero {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.events-main-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.events-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.events-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.events-event-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.events-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 86, 179, 0.1);
+}
+
+.events-type-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.events-type-tag.future {
+  background-color: #e3f2fd;
+  color: #0056b3;
+}
+
+.events-type-tag.past {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+.events-event-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.events-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.events-icon {
+  color: #0056b3;
+}
+
+.events-event-desc {
+  color: #555;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.events-details-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  border: 2px solid #0056b3;
+  color: #0056b3;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.events-details-btn:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .events-hero {
+    padding: 60px 20px;
+  }
+
+  .events-main-title {
+    font-size: 2rem;
+  }
+
+  .events-subtitle {
+    font-size: 1rem;
+  }
+
+  .events-content {
+    margin: 40px auto;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-event-card {
+    padding: 20px;
+  }
+
+  .events-event-title {
+    font-size: 1.2rem;
+  }
+}
