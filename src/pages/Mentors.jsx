@@ -3,6 +3,7 @@ import './Mentors.css';
 import fatima from '../assets/fatima.jpeg';
 import vusal from '../assets/vusal.jpeg';
 import saiq from '../assets/saiq.jpeg';
+import rashid from '../assets/rashid.jpeg';
 
 const mentors = [
   {
@@ -27,7 +28,7 @@ const mentors = [
   {
     name: 'Rəşid Məhəmmədəli oğlu Hüseynov',
     title: 'Hüquqşünas, Sosial Layihə Rəhbəri',
-    photo: null,
+    photo: rashid,
     bio: 'İlk ali təhsilini tarix ixtisası üzrə alsa da, sonradan təhsilini davam etdirərək hüquqşünas ixtisasına yiyələnmişdir. Qanunvericilik və hüquq sahəsində, xüsusilə məhkəmə hökmü ilə azadlıqdan məhrum edilmiş şəxslərin cəzalarının qanunvericiliyə uyğun icrası və hüquqlarının qorunması sahəsində peşəkar mütəxəssisdir. Cəza müddəti başa çatmaqda olan məhbusların müxtəlif ixtisaslar üzrə peşə bacarıqları ilə təmin olunması və cəmiyyətə inteqrasiyası istiqamətində bir sıra sosial layihələrə rəhbərlik etmişdir.',
   },
 ];
