@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Mentors.css';
 import fatima from '../assets/fatima.jpeg';
 import vusal from '../assets/vusal.jpeg';
@@ -8,9 +8,9 @@ import rashid from '../assets/rashid.jpeg';
 const mentors = [
    {
     name: 'Rəşid Məhəmmədəli oğlu Hüseynov',
-    title: 'Hüquqşünas, Sosial Layihə Rəhbəri',
+    title: 'Tarixçi, hüquqşünas, sahibkar',
     photo: rashid,
-    bio: 'İlk ali təhsilini tarix ixtisası üzrə alsa da, sonradan təhsilini davam etdirərək hüquqşünas ixtisasına yiyələnmişdir. Qanunvericilik və hüquq sahəsində, xüsusilə məhkəmə hökmü ilə azadlıqdan məhrum edilmiş şəxslərin cəzalarının qanunvericiliyə uyğun icrası və hüquqlarının qorunması sahəsində peşəkar mütəxəssisdir. Cəza müddəti başa çatmaqda olan məhbusların müxtəlif ixtisaslar üzrə peşə bacarıqları ilə təmin olunması və cəmiyyətə inteqrasiyası istiqamətində bir sıra sosial layihələrə rəhbərlik etmişdir.',
+    bio: 'Rəşid Məhəmmədəli oğlu Hüseynov hüquq və biznes sahələrində fəaliyyəti ilə seçilən peşəkar mütəxəssislərdəndir. O, ilk ali təhsilini Bakı Dövlət Universitetində tarix ixtisası üzrə almış, daha sonra təhsilini davam etdirərək hüquqşünaslıq sahəsində ixtisaslaşmışdır. Bu istiqamətdə qazandığı bilik və təcrübə onun peşəkar fəaliyyətinin formalaşmasında mühüm rol oynamışdır. Rəşid Hüseynov sahibkarlıq fəaliyyəti ilə geniş tanınır və müxtəlif istiqamətlər üzrə biznes fəaliyyəti həyata keçirir. O, bizneslərin qurulması, inkişaf etdirilməsi və səmərəli idarə olunması sahəsində mühüm nailiyyətlər əldə etmişdir. Strateji yanaşması, güclü idarəetmə bacarıqları və innovativ düşüncə tərzi ilə seçilən R. Hüseynov ölkədə nüfuzlu iş adamlarından biri kimi tanınır. O, həmçinin “Güvən Təhsilin İnkişafına Dəstək Fondu”nun ideya müəllifi və təsisçisidir. Fondun yaradılması təşəbbüsü məhz onun tərəfindən irəli sürülmüş, gənclərin təhsilə əlçatanlığının artırılması, sosial həssas qrupların dəstəklənməsi və onların inkişafına töhfə verilməsi məqsədilə həyata keçirilmişdir. Onun rəhbərliyi ilə fond qısa müddətdə müxtəlif layihə və təşəbbüslərlə cəmiyyətə əhəmiyyətli töhfələr verməyə başlamışdır. Rəşid Hüseynovun fəaliyyəti hüquq, biznes və sosial sahələri əhatə edən çoxşaxəli istiqamətlər üzrə inkişaf edir. O, peşəkarlığı, məsuliyyətli yanaşması və liderlik keyfiyyətləri ilə seçilən nüfuzlu simalardan biridir.',
   },
   {
     name: 'Fatimə Ağayar qızı Quliyeva',
@@ -36,9 +36,15 @@ const mentors = [
 ];
 
 const Mentors = () => {
+  const [expandedMentor, setExpandedMentor] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const toggleMentorBio = (mentorId) => {
+    setExpandedMentor((prev) => (prev === mentorId ? null : mentorId));
+  };
 
   return (
     <div className="mentors-page">
@@ -71,7 +77,14 @@ const Mentors = () => {
                 <div className="mentor-info">
                   <h2 className="mentor-name">{mentor.name}</h2>
                   <span className="mentor-title">{mentor.title}</span>
-                  <p className="mentor-bio">{mentor.bio}</p>
+                  <p className={`mentor-bio ${expandedMentor === mentor.name ? 'expanded' : ''}`}>{mentor.bio}</p>
+                  <button
+                    type="button"
+                    className="mentor-toggle-btn"
+                    onClick={() => toggleMentorBio(mentor.name)}
+                  >
+                    {expandedMentor === mentor.name ? 'Mətni gizlət' : 'Daha çox oxu'}
+                  </button>
                 </div>
               </div>
             ))}

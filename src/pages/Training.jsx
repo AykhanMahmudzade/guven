@@ -5,8 +5,22 @@ import './Training.css';
 // Şəkillərin importu
 import t1 from '../assets/t1.png';
 import t2 from '../assets/t2.jpg';
+import t6 from '../assets/t6.jpeg';
 
 const trainings = [
+  {
+    id: 3,
+    date: "04.04.2026",
+    title: "Sığorta nədir və necə işləyir?",
+    image: t6,
+    description: `4 aprel 2026-cı il tarixində Atelier 61 məkanında “Güvən Təhsilin İnkişafına Dəstək Fondu” və “Qala” sığorta şirkətinin təşkilatçılığı ilə “Sığorta nədir və necə işləyir?” mövzusunda maarifləndirici təlim keçirilib. Təlimin məqsədi maliyyə savadlılığını artırmaq və sığorta biliklərini genişləndirmək olub.
+
+Açılışda layihə koordinatoru Fatimə Quliyeva çıxış edib. Daha sonra Fondun direktoru D.Ş. Şıkarov fondun fəaliyyəti barədə məlumat verib, həmtəsisçi və himayəçi Rəşid Hüseynov isə belə təşəbbüslərin əhəmiyyətini vurğulayıb. Fondun təqdimatı və yeni rəsmi saytının tanıtımı da baş tutub.
+
+Əsas sessiya anderrayter İlahə Ümidli tərəfindən keçirilib və burada risk, sığorta anlayışları, sığorta növləri və praktiki nümunələr izah olunub. Təlim interaktiv şəkildə davam edib.`,
+    partner: "Tərəfdaş: Qala Sığorta",
+    extra: "Daha sonra “Qala Sığorta” şirkətinin satış departamentinin rəhbəri İlkin Nəcəfov çıxış edərək şirkətin imkanları barədə məlumat verib. Tədbir promo məhsulların təqdimatı, xatirə fotosu və bağlanışla yekunlaşıb."
+  },
   {
     id: 1,
     date: "28.06.2025",

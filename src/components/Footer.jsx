@@ -86,7 +86,7 @@ const Footer = () => {
             <ul className="contact-list-new">
               <li><FaMapMarkerAlt /> <span>Bakı şəhəri, Nərimanov rayon, Dərnəgül şossesi, 2082-ci məhəllə</span></li>
               <li><FaPhone /> <span>+994 99 711 91 97</span></li>
-              <li><FaPhone /> <span>+994 12 342 19 19 (daxili 110)</span></li>
+              <li><FaPhone /> <span>+994 50 603 48 44 </span></li>
               <li><FaEnvelope /> <span>info@guven.az</span></li>
               <li><FaClock /> <span>Bazar ertəsi - Cümə: 09:00 - 18:00</span></li>
             </ul>

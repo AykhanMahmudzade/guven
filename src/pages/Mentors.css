@@ -127,6 +127,32 @@
   color: #4f5e7a;
   line-height: 1.75;
   margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mentor-bio.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.mentor-toggle-btn {
+  align-self: flex-start;
+  margin-top: 2px;
+  border: 0;
+  background: transparent;
+  color: #0056b3;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mentor-toggle-btn:hover {
+  text-decoration: underline;
 }
 
 /* --- Responsive --- */

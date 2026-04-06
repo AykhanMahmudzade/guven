@@ -6,10 +6,15 @@ import Video from "yet-another-react-lightbox/plugins/video";
 import "yet-another-react-lightbox/styles.css"; 
 import './Gallery.css';
 
+import galleryClip0 from '../assets/v6.mp4';
 import galleryClip1 from '../assets/g2vg.mp4';
 import galleryClip2 from '../assets/g1v.mp4';
+import t5 from '../assets/t5.jpeg';
+import t6 from '../assets/t6.jpeg';
+import t8 from '../assets/t8.jpeg';
 
 const videoList = [
+  { id: 100, type: 'video', src: galleryClip0 },
   { id: 101, type: 'video', src: galleryClip1 },
   { id: 102, type: 'video', src: galleryClip2 },
 ];
@@ -24,8 +29,14 @@ const imageList = Array.from({ length: 16 }, (_, i) => i + 1)
     src: new URL(`../assets/g${id}.jpg`, import.meta.url).href
   }));
 
+const extraImageList = [
+  { id: 201, type: 'image', src: t5 },
+  { id: 202, type: 'image', src: t6 },
+  { id: 203, type: 'image', src: t8 },
+];
+
 // Объединяем контент
-const galleryContent = [...videoList, ...imageList];
+const galleryContent = [...videoList, ...extraImageList, ...imageList];
 
 const Gallery = () => {
   const [openLightbox, setOpenLightbox] = useState(false);

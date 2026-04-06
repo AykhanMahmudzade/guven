@@ -1,6 +1,14 @@
 import React from 'react';
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from 'react-icons/fa';
 import './Events.css';
+import t1 from '../assets/t1.png';
+import t2 from '../assets/t2.jpg';
+import t6 from '../assets/t6.jpeg';
+
+const getShortText = (text, maxLength = 82) => {
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trim()}...`;
+};
 
 const Events = () => {
   const eventsData = [
@@ -10,7 +18,8 @@ const Events = () => {
       title: "Gənc Liderlər Forumu",
       location: "Bakı, ADA Universiteti",
       type: "Gələcək Tədbir",
-      desc: "Tələbələrin liderlik bacarıqlarını inkişaf etdirmək üçün təşkil olunan genişmiqyaslı forum."
+      image: t1,
+      desc: "Tələbələr üçün liderlik və komanda işi bacarıqlarına fokuslanan forum proqramı."
     },
     {
       id: 2,
@@ -18,7 +27,8 @@ const Events = () => {
       title: "Regionlarda Təhsil Turu",
       location: "Gəncə, Şəki, Quba",
       type: "Keçirilmiş",
-      desc: "Məktəblilərlə görüş və universitet seçimi mövzusunda peşəkar seminarlar."
+      image: t2,
+      desc: "Region məktəblilərinə universitet seçimi üzrə qısa və praktiki seminarlar."
     },
     {
       id: 3,
@@ -26,7 +36,8 @@ const Events = () => {
       title: "Könüllülərlə Görüş",
       location: "Fondun baş ofisi",
       type: "Keçirilmiş",
-      desc: "Yeni könüllülər proqramının təqdimatı və komanda quruculuğu oyunları."
+      image: t6,
+      desc: "Yeni könüllülər proqramının təqdimatı və interaktiv komanda quruculuğu sessiyası."
     }
   ];
 
@@ -44,6 +55,11 @@ const Events = () => {
               <div className={`events-type-tag ${event.type === "Gələcək Tədbir" ? "future" : "past"}`}>
                 {event.type}
               </div>
+              {event.image && (
+                <div className="events-image-wrap">
+                  <img src={event.image} alt={event.title} className="events-image" loading="lazy" />
+                </div>
+              )}
               <h3 className="events-event-title">{event.title}</h3>
               
               <div className="events-info-row">
@@ -56,7 +72,7 @@ const Events = () => {
                 <span>{event.location}</span>
               </div>
 
-              <p className="events-event-desc">{event.desc}</p>
+              <p className="events-event-desc">{getShortText(event.desc)}</p>
               
               <button className="events-details-btn">
                 <FaUsers /> 
