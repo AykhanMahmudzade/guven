@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import './Partners.css';
 
 // Импорт логотипов (убедись, что они в src/assets/)
@@ -63,9 +63,7 @@ const Partners = () => {
                       <span>{partner.name.charAt(0)}</span>
                     </div>
                   )}
-                  <div className="partner-overlay">
-                    <FaInstagram className="insta-icon" />
-                  </div>
+
                 </div>
                 <div className="partner-info">
                   <h3>{partner.name}</h3>
